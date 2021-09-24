@@ -119,6 +119,9 @@
                                                                       class="sidebar-link">1. Contract Information</a></li>
                                     <li class="sidebar-sub-header"><a href="market-api.html#_2-Get Market Depth"
                                                                       class="sidebar-link">2.Get Market Depth</a></li>
+
+                                    <li class="sidebar-sub-header"><a href="market-api.html#_3-12"
+                                                                      class="sidebar-link">3.Get Kline</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -447,7 +450,7 @@
                     </tbody>
                 </table>
                 <div class="language-javascript extra-class"><pre class="language-javascript"><code># Response
-                     <div class="language-javascript extra-class"><pre class="language-javascript"><code>    # Response
+                   <pre class="language-javascript"><code>    # Response
     <span class="token punctuation">{</span>
         <span class="token string">"code"</span><span class="token operator">:</span> <span
                                  class="token number">200</span><span class="token punctuation">,</span>
@@ -471,6 +474,128 @@
             <span class="token punctuation">}</span>
     <span class="token punctuation">}</span>
 </code></pre>
+                </div>
+
+                <h2 id="_3-12"><a href="#_3-12" class="header-anchor">#</a> 3. Get Kline </h2>
+                <p><strong>HTTP Request</strong></p>
+                <div class="language-http extra-class"><pre class="language-http">
+                    <code>
+    # Request
+    GET /market/kline
+    example： https://byd-ymx.bydtms.com/b2b/rank/market/kline
+    description:This endpoint retrieves all klines in a specific range
+</code></pre></div>
+                <p><strong>request description</strong></p>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>name</th>
+                        <th>Type</th>
+                        <th>Status</th>
+                        <th>description</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>market_pair</td>
+                        <td>string</td>
+                        <td>Mandatory</td>
+                        <td> A pair such as “LTC-PERPBTC”</td>
+                    </tr>
+                    <tr>
+                        <td>period</td>
+                        <td>string</td>
+                        <td>Mandatory</td>
+                        <td>The period of each candle example:1min,3min, 5min, 15min, 30min, 60min, 4hour, 1day</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <p><strong>response description</strong></p>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>name</th>
+                        <th>Type</th>
+                        <th>Status</th>
+                        <th>description</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>id</td>
+                        <td>string</td>
+                        <td>Mandatory</td>
+                        <td> The UNIX timestamp in seconds as response id</td>
+                    </tr>
+                    <tr>
+                        <td>open</td>
+                        <td>string</td>
+                        <td>Mandatory</td>
+                        <td>The opening price</td>
+                    </tr>
+                    <tr>
+                        <td>close</td>
+                        <td>string</td>
+                        <td>Mandatory</td>
+                        <td> The closing price</td>
+                    </tr>
+                    <tr>
+                        <td>low</td>
+                        <td>string</td>
+                        <td>Mandatory</td>
+                        <td> The low price</td>
+                    </tr>
+
+                    <tr>
+                        <td>high</td>
+                        <td>string</td>
+                        <td>Mandatory</td>
+                        <td> The high price</td>
+                    </tr>
+
+                    <tr>
+                        <td>vol</td>
+                        <td>string</td>
+                        <td>Mandatory</td>
+                        <td> Accumulated trading value, in quote currency</td>
+                    </tr>
+
+                    <tr>
+                        <td>openTime</td>
+                        <td>string</td>
+                        <td>Mandatory</td>
+                        <td>Open time</td>
+                    </tr>
+
+                    <tr>
+                        <td>closeTime</td>
+                        <td>string</td>
+                        <td>Mandatory</td>
+                        <td> close time</td>
+                    </tr>
+
+                    </tbody>
+                </table>
+                <div class="language-javascript extra-class"><pre class="language-javascript"><code>    # Response
+    <span class="token punctuation">{</span>
+        <span class="token string">"code"</span><span class="token operator">:</span> <span
+                            class="token number">200</span><span class="token punctuation">,</span>
+        <span class="token string">"msg"</span><span class="token operator">:</span> <span
+                            class="token string">"success"</span><span class="token punctuation">,</span>
+        <span class="token string">"data"</span><span class="token operator">:</span><span class="token punctuation">[{</span>
+               <span  class="token string">"id":</span><span class="token string">1632462798405</span><span class="token punctuation">,</span>
+               <span  class="token string">"open":</span><span class="token string">44157.43</span><span class="token punctuation">,</span>
+               <span  class="token string">"close":</span><span class="token string">44126.59</span><span class="token punctuation">,</span>
+               <span  class="token string">"low":</span><span class="token string">44126.59</span><span class="token punctuation">,</span>
+               <span  class="token string">"high":</span><span class="token string">44174.71</span><span class="token punctuation">,</span>
+               <span  class="token string">"closeTime":</span><span class="token string">1632462660000</span><span class="token punctuation">,</span>
+               <span  class="token string">"openTime":</span><span class="token string">1632462660000</span><span class="token punctuation">,</span>
+               <span  class="token string">"vol":</span><span class="token string">"vol"</span>
+               <span class="token punctuation">}]</span>
+           <span class="token punctuation">}</span>
+     <span class="token punctuation">}</span>
+</code></pre>
+
                 </div>
             <div>
             <footer class="page-edit"><!---->
