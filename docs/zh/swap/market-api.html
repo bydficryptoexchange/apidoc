@@ -61,17 +61,17 @@
                           d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path>
                 </svg>
             </div>
-       <!--     <a href="/docs/zh/" class="home-link router-link-active"><img src="/docs/logo.png" alt="Bityard API Docs"
+            <!--     <a href="/docs/zh/" class="home-link router-link-active"><img src="/docs/logo.png" alt="Bityard API Docs"
 
 
-                                                                          class="logo"></a>-->
-         <!--       <div class="navs">
-                <nav class="nav-links can-hide">
-                    <div class="nav-item"><a href="spot-info.html">
-                        Spot API Reference
-                    </a></div>
-                </nav>
-            </div>-->
+                                                                               class="logo"></a>-->
+                   <div class="navs">
+                   <nav class="nav-links can-hide">
+                       <div class="nav-item"><a href="spot-info.html">
+                           Spot API Reference
+                       </a></div>
+                   </nav>
+               </div>
             <div class="navs">
                 <nav class="nav-links can-hide">
                     <div class="nav-item"><a href="base-info.html" >
@@ -106,12 +106,12 @@
                     <section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Swap API Reference</span>
                         <!----></p>
                         <ul class="sidebar-links sidebar-group-items">
-<!--
-                            <li><a href="/docs/zh/swap/introduce.html" class="sidebar-link">Introduce</a></li>
--->
-<!--
-                            <li><a href="/docs/zh/swap/authentication.html" class="sidebar-link">签名认证</a></li>
--->
+                            <!--
+                                                        <li><a href="/docs/zh/swap/introduce.html" class="sidebar-link">Introduce</a></li>
+                            -->
+                            <!--
+                                                        <li><a href="/docs/zh/swap/authentication.html" class="sidebar-link">签名认证</a></li>
+                            -->
                             <li><a href="base-info.html" class="sidebar-link">Basic Information</a></li>
                             <li><a href="market-api.html" class="active sidebar-link" aria-current="page">Market Interface</a>
                                 <ul class="sidebar-sub-headers">
@@ -122,7 +122,7 @@
 
                                     <li class="sidebar-sub-header"><a href="market-api.html#_3-12"
                                                                       class="sidebar-link">3.Get Kline</a></li>
-				    <li class="sidebar-sub-header"><a href="market-api.html#_3-13"
+                                    <li class="sidebar-sub-header"><a href="market-api.html#_3-13"
                                                                       class="sidebar-link">4.Get Currency Info</a></li>
                                 </ul>
                             </li>
@@ -134,7 +134,7 @@
 
         <main class="page">
             <div class="theme-default-content content__default"><h1 id="Market Interface"><a href="#Market Interface"
-                                                                                 class="header-anchor">#</a> Market Interface</h1>
+                                                                                             class="header-anchor">#</a> Market Interface</h1>
                 <h2 id="_1-Contract Information"><a href="#_1-Contract Information" class="header-anchor">#</a> 1. Contract Information</h2>
                 <p><strong>HTTP Request</strong></p>
                 <div class="language-http extra-class"><pre class="language-http"><code>    # Request
@@ -168,7 +168,7 @@
                         <td style="text-align: center;">Mandatory</td>
                         <td style="text-align: center;">Prompt information</td>
                     </tr>
-		    <tr>
+                    <tr>
                         <td>change_percent</td>
                         <td style="text-align: center;">String</td>
                         <td style="text-align: center;">Mandatory</td>
@@ -206,7 +206,7 @@
                     </tr>
                     <tr>
                         <td>
-				USD_volume</td>
+                            USD_volume</td>
                         <td style="text-align: center;">decimal</td>
                         <td style="text-align: center;">Recommended</td>
                         <td style="text-align: center;">24 hour trading USD volume </td>
@@ -325,13 +325,13 @@
                         <td style="text-align: center;">Mandatory</td>
                         <td style="text-align: center;">Describes the currency which the contract is priced in (e.g. USD,)</td>
                     </tr>
-                      <tr>
+                    <tr>
                         <td>avgResTimeMs</td>
                         <td style="text-align: center;">String</td>
                         <td style="text-align: center;">Mandatory</td>
                         <td style="text-align: center;">avg response time.ms</td>
                     </tr>
-                      <tr>
+                    <tr>
                         <td>invoke</td>
                         <td style="text-align: center;">String</td>
                         <td style="text-align: center;">Mandatory</td>
@@ -470,13 +470,13 @@
                         <td>Mandatory</td>
                         <td>An array containing 2 elements. The ask price and quantity for each ask order</td>
                     </tr>
-                     <tr>
+                    <tr>
                         <td>avgResTimeMs</td>
                         <td>Long</td>
                         <td>Mandatory</td>
                         <td> avg response time.ms</td>
                     </tr>
-		            <tr>
+                    <tr>
                         <td>invoke</td>
                         <td>boolean</td>
                         <td>Mandatory</td>
@@ -488,23 +488,23 @@
                    <pre class="language-javascript"><code>    # Response
     <span class="token punctuation">{</span>
         <span class="token string">"code"</span><span class="token operator">:</span> <span
-                                 class="token number">200</span><span class="token punctuation">,</span>
+                               class="token number">200</span><span class="token punctuation">,</span>
         <span class="token string">"msg"</span><span class="token operator">:</span> <span
-                                 class="token string">"success"</span><span class="token punctuation">,</span>
+                               class="token string">"success"</span><span class="token punctuation">,</span>
         <span class="token string">"data"</span><span class="token operator">:</span><span class="token punctuation">{</span>
         <span class="token string">"ticker_id"</span><span class="token operator">:</span> <span class="token number">BTC-PERPUSD</span><span class="token punctuation">,</span>
         <span class="token string">"asks"</span><span class="token operator">:</span> <span
-                            class="token string">[</span><span class="token punctuation">{</span>
+                               class="token string">[</span><span class="token punctuation">{</span>
         <span class="token string">"amount"</span><span class="token operator">:</span> <span
-                            class="token punctuation">1000,</span>
+                               class="token punctuation">1000,</span>
         <span class="token string">"price"</span><span class="token operator">:</span> <span
-                            class="token string">"50000.18"</span>
+                               class="token string">"50000.18"</span>
               <span class="token punctuation">}</span> <span class="token string">]</span><span class="token operator">,</span>
         <span class="token string">"bids"</span><span class="token punctuation">:</span><span class="token string">[</span><span class="token operator">{</span>
         <span class="token string">"amount"</span><span class="token operator">:</span> <span
-                            class="token punctuation">1000,</span>
+                               class="token punctuation">1000,</span>
         <span class="token string">"price"</span><span class="token operator">:</span> <span
-                            class="token string">"50000.18"</span>
+                               class="token string">"50000.18"</span>
             <span class="token operator">}</span><span class="token string">]</span>
             <span class="token punctuation">}</span>
     <span class="token punctuation">}</span>
@@ -608,13 +608,13 @@
                         <td>Mandatory</td>
                         <td> close time</td>
                     </tr>
- 		            <tr>
+                    <tr>
                         <td>avgResTimeMs</td>
                         <td>Long</td>
                         <td>Mandatory</td>
                         <td> avg response time.ms</td>
                     </tr>
-		            <tr>
+                    <tr>
                         <td>invoke</td>
                         <td>boolean</td>
                         <td>Mandatory</td>
@@ -643,7 +643,7 @@
 </code></pre>
 
                 </div>
-		     <h2 id="_3-13"><a href="#_3-13" class="header-anchor">#</a> 4. Get Currency Info </h2>
+                <h2 id="_3-13"><a href="#_3-13" class="header-anchor">#</a> 4. Get Currency Info </h2>
                 <p><strong>HTTP Request</strong></p>
                 <div class="language-http extra-class"><pre class="language-http">
                     <code>
@@ -686,7 +686,7 @@
                         <td>withdrawals</td>
                         <td>string</td>
                         <td>Mandatory</td>
-                       <td>“online” is not withdrawals。Otherwise。“offline”  </td>
+                        <td>“online” is not withdrawals。Otherwise。“offline”  </td>
                     </tr>
 
                     <tr>
@@ -696,15 +696,15 @@
                         <td>avg deal time</td>
                     </tr>
 
-                    
-               
- 		     <tr>
+
+
+                    <tr>
                         <td>avgResTimeMs</td>
                         <td>Long</td>
                         <td>Mandatory</td>
                         <td> avg response time.ms</td>
                     </tr>
-		    <tr>
+                    <tr>
                         <td>invoke</td>
                         <td>boolean</td>
                         <td>Mandatory</td>
@@ -730,11 +730,11 @@
 </code></pre>
 
                 </div>
-            <div>
-            <footer class="page-edit"><!---->
-                <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">2022/05/19上午15:05:34</span>
-                </div>
-            </footer>
+                <div>
+                    <footer class="page-edit"><!---->
+                        <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">2022/05/19上午15:05:34</span>
+                        </div>
+                    </footer>
 
         </main>
 
