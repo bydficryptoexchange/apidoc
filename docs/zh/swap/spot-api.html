@@ -464,11 +464,11 @@
             <span class="token string">"YFI_USDT"</span><span class="token operator">:</span><span class="token punctuation">{</span>
                <span  class="token string">"can_deposit":</span><span class="token string">"false"</span><span class="token punctuation">,</span>
                <span  class="token string">"can_withdraw":</span><span class="token string">"true"</span><span class="token punctuation">,</span>
-               <span  class="token string">"maker_fee":</span><span class="token string">null</span><span class="token punctuation">,</span>
+               <span  class="token string">"maker_fee":</span><span class="token string">0.0001</span><span class="token punctuation">,</span>
                <span  class="token string">"max_withdraw":</span><span class="token string">"47115.0"</span><span class="token punctuation">,</span>
                <span  class="token string">"min_withdraw":</span><span class="token string">"47115.0"</span><span class="token punctuation">,</span>
                <span  class="token string">"name":</span><span class="token string">"BTC"</span><span class="token punctuation">,</span>
-               <span  class="token string">"taker_fee":</span><span class="token string">null</span><span class="token punctuation">,</span>
+               <span  class="token string">"taker_fee":</span><span class="token string">>0.0001</span><span class="token punctuation">,</span>
                <span  class="token string">"unified_cryptoasset_id":</span><span class="token string">"689"</span><span class="token punctuation">,</span>
                <span class="token punctuation">}</span>
            <span class="token punctuation">}</span>
@@ -562,8 +562,8 @@
                 <div class="language-http extra-class"><pre class="language-http">
                     <code>
     # Request
-    GET /rank/orderbook
-    example： https://bydfi.com/b2b/rank/orderbook
+    GET /rank/trades
+    example： https://bydfi.com/b2b/rank/trades
     description:The trades endpoint is to return data on all recently completed trades for a given market pair
 </code></pre></div>
                 <p><strong>request description</strong></p>
